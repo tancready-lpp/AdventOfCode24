@@ -123,8 +123,8 @@ print(len(norm_forw) + len(norm_back) + len(trans_forw) + len(trans_back))
 
 # brutal force approach to search diagonally
 r,l = 0,0 
-for i in range(-len(s)+2,len(s)-2):
-    for j in range(-len(s)+2,len(s)-2):
+for i in range(2,len(s)-2):
+    for j in range(2,len(s)-2):
         if s[i][j] == "M":
             if (s[i-1][j-1] == "X" and s[i+1][j+1] =="A" and s[i+2][j+2] =="S") or (s[i+1][j+1] == "X" and s[i-1][j-1] =="A" and s[i-2][j-2] =="S"):
                 r +=1
